@@ -6,7 +6,7 @@ const PRODUCTS = [
     name: "Car Shampoo",
     category: "Car Care",
     description: "pH-neutral shampoo for safe, effective cleaning.",
-    image: "/images/services/autodetailing_img.png",
+    image: "/images/products/4.png",
     features: [
       "Safe for coatings and wax",
       "High-foaming rinse",
@@ -18,7 +18,7 @@ const PRODUCTS = [
     name: "Anti Fungal",
     category: "Protection",
     description: "Interior anti-fungal treatment to keep cabins fresh.",
-    image: "/images/services/nanocoating_img.png",
+    image: "/images/products/2.png",
     features: [
       "Menghilangkan jamur interior",
       "Mencegah bau apek",
@@ -30,7 +30,7 @@ const PRODUCTS = [
     name: "Tire Wax",
     category: "Protection",
     description: "Long-lasting tire shine with protective finish.",
-    image: "/images/services/paintprotection_img.png",
+    image: "/images/products/6.png",
     features: [
       "Finish hitam satin",
       "Tidak lengket",
@@ -42,7 +42,7 @@ const PRODUCTS = [
     name: "Water-Based Body Shine",
     category: "Car Care",
     description: "Quick detailer for fast, glossy body shine.",
-    image: "/images/services/filmprotection_img.png",
+    image: "/images/products/1.png",
     features: [
       "Gloss cepat",
       "Aman untuk finishing matte (tipis)",
