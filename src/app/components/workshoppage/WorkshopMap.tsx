@@ -1,6 +1,6 @@
 "use client";
 
-import { FaDirections, FaMapMarkerAlt } from "react-icons/fa";
+import { FaMapMarkerAlt } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { LiaLongArrowAltRightSolid } from "react-icons/lia";
 import { RiInstagramFill } from "react-icons/ri";

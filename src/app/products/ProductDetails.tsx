@@ -1,14 +1,46 @@
 "use client";
 
-export default function ProductDetails({ name, features = [], usage }: { name: string; features?: string[]; usage?: string }) {
-  return (
-    <details className="mt-5 group" onToggle={(e) => {
-      const opened = (e.target as HTMLDetailsElement).open;
-      if (opened) {
-        try { (window as any).gtag && (window as any).gtag('event', 'product_more_details', { product_name: name }); } catch {}
-        try { (window as any).fbq && (window as any).fbq('trackCustom', 'ProductMoreDetails', { product_name: name }); } catch {}
+// Analytics declarations for better TypeScript support
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+    fbq?: (...args: unknown[]) => void;
+  }
+}
+
+interface ProductDetailsProps {
+  name: string;
+  features?: string[];
+  usage?: string;
+}
+
+export default function ProductDetails({ name, features = [], usage }: ProductDetailsProps) {
+  // Analytics tracking helper
+  const trackProductDetails = (productName: string) => {
+    try {
+      // Google Analytics
+      if (window.gtag) {
+        window.gtag('event', 'product_more_details', { product_name: productName });
       }
-    }}>
+      
+      // Facebook Pixel
+      if (window.fbq) {
+        window.fbq('trackCustom', 'ProductMoreDetails', { product_name: productName });
+      }
+    } catch (error) {
+      console.warn('Analytics tracking failed:', error);
+    }
+  };
+
+  const handleToggle = (e: React.SyntheticEvent<HTMLDetailsElement>) => {
+    const opened = (e.target as HTMLDetailsElement).open;
+    if (opened) {
+      trackProductDetails(name);
+    }
+  };
+
+  return (
+    <details className="mt-5 group" onToggle={handleToggle}>
       <summary className="cursor-pointer inline-flex items-center gap-2 text-sm sm:text-base font-semibold text-black py-2">
         <span className="underline">More Details</span>
       </summary>
@@ -17,8 +49,8 @@ export default function ProductDetails({ name, features = [], usage }: { name: s
           <div className="mb-3">
             <div className="font-semibold">Key Features</div>
             <ul className="list-disc pl-5 mt-1">
-              {features.map((f) => (
-                <li key={`${name}-${f}`}>{f}</li>
+              {features.map((feature, index) => (
+                <li key={`${name}-feature-${index}`}>{feature}</li>
               ))}
             </ul>
           </div>
@@ -33,5 +65,3 @@ export default function ProductDetails({ name, features = [], usage }: { name: s
     </details>
   );
 }
-
-

@@ -94,7 +94,7 @@ export default function ProductsPage() {
               </div>
             ))}
           </div>
-          <p className="text-white/50 text-sm mt-6">Interested? Contact us to learn more.</p>
+          <p className="text-white/50 text-sm mt-6">Interested? Contact us to learn more. {waLink}</p>
         </div>
       </section>
     </main>

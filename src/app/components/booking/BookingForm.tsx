@@ -4,6 +4,14 @@ import { useMemo, useState } from "react";
 
 type SubmitState = "idle" | "submitting" | "success" | "error";
 
+// Analytics declarations for better TypeScript support
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+    fbq?: (...args: unknown[]) => void;
+  }
+}
+
 const SERVICE_OPTIONS = [
   "Nano Coating Ceramic",
   "Rust Protection / Anti-Rust",
@@ -44,6 +52,40 @@ export default function BookingForm() {
     );
   };
 
+  // Analytics tracking helper
+  const trackBookingSubmit = () => {
+    try {
+      // Google Analytics
+      if (window.gtag) {
+        window.gtag('event', 'booking_submit', { method: 'whatsapp' });
+      }
+      
+      // Facebook Pixel
+      if (window.fbq) {
+        window.fbq('trackCustom', 'BookingSubmit', { method: 'whatsapp' });
+      }
+    } catch (error) {
+      console.warn('Analytics tracking failed:', error);
+    }
+  };
+
+  const resetForm = () => {
+    setOwnerName("");
+    setAddress("");
+    setPhone("");
+    setEmail("");
+    setLicensePlate("");
+    setBrandMake("");
+    setYearColor("");
+    setChassisNumber("");
+    setEngineNumber("");
+    setServices([]);
+    setPreferredDate("");
+    setMessage("");
+    setSubmitState("idle");
+    setErrorMsg("");
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setErrorMsg("");
@@ -71,18 +113,22 @@ export default function BookingForm() {
         preferredDate ? `Tanggal: ${preferredDate}` : "",
         message ? `Catatan: ${message}` : "",
       ].filter(Boolean);
+      
       const text = encodeURIComponent(lines.join("\n"));
       const waUrl = `https://wa.me/${waNumber}?text=${text}`;
+      
       // Open WhatsApp chat
       window.open(waUrl, "_blank");
+      
       // Analytics tracking
-      try { (window as any).gtag && (window as any).gtag('event', 'booking_submit', { method: 'whatsapp' }); } catch {}
-      try { (window as any).fbq && (window as any).fbq('trackCustom', 'BookingSubmit', { method: 'whatsapp' }); } catch {}
+      trackBookingSubmit();
+      
       setSubmitState("success");
       setShowSummary(true);
     } catch (err) {
       setSubmitState("error");
-      setErrorMsg((err as Error).message || "Terjadi kesalahan.");
+      setErrorMsg(err instanceof Error ? err.message : "Terjadi kesalahan.");
+      console.error("Booking submission error:", err);
     }
   };
 
@@ -196,21 +242,13 @@ export default function BookingForm() {
 
       {showSummary && (
         <div className="fixed inset-0 z-50 flex items-center justify-center">
-          <div className="absolute inset-0 bg-black/70" onClick={() => {
-            setShowSummary(false);
-            setOwnerName("");
-            setAddress("");
-            setPhone("");
-            setEmail("");
-            setLicensePlate("");
-            setBrandMake("");
-            setYearColor("");
-            setChassisNumber("");
-            setEngineNumber("");
-            setServices([]);
-            setPreferredDate("");
-            setMessage("");
-          }} />
+          <div 
+            className="absolute inset-0 bg-black/70" 
+            onClick={() => {
+              setShowSummary(false);
+              resetForm();
+            }} 
+          />
           <div className="relative bg-white text-gray-900 w-full max-w-lg mx-4 rounded shadow-lg overflow-hidden">
             <div className="relative h-28 bg-gradient-to-r from-black to-gray-700">
               <div className="absolute inset-0 flex items-center justify-center">
@@ -237,9 +275,7 @@ export default function BookingForm() {
               <div className="mt-6 flex justify-end gap-3">
                 <button
                   className="px-4 py-2 border border-gray-300 rounded"
-                  onClick={() => {
-                    setShowSummary(false);
-                  }}
+                  onClick={() => setShowSummary(false)}
                 >
                   Tutup
                 </button>
@@ -247,18 +283,7 @@ export default function BookingForm() {
                   className="px-4 py-2 bg-black text-white rounded"
                   onClick={() => {
                     setShowSummary(false);
-                    setOwnerName("");
-                    setAddress("");
-                    setPhone("");
-                    setEmail("");
-                    setLicensePlate("");
-                    setBrandMake("");
-                    setYearColor("");
-                    setChassisNumber("");
-                    setEngineNumber("");
-                    setServices([]);
-                    setPreferredDate("");
-                    setMessage("");
+                    resetForm();
                   }}
                 >
                   Selesai
@@ -271,5 +296,3 @@ export default function BookingForm() {
     </form>
   );
 }
-
-
