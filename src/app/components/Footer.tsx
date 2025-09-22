@@ -86,6 +86,12 @@ export default function Footer() {
           <div className="space-y-6">
             <h3 className="text-xl font-semibold text-white">Quick Links</h3>
             <div className="flex flex-col gap-2">
+              <a href="/services" className="underline text-white/90 hover:text-white">Services</a>
+              <a href="/pricelist" className="underline text-white/90 hover:text-white">Price List</a>
+              <a href="/products" className="underline text-white/90 hover:text-white">Products</a>
+              <a href="/projects" className="underline text-white/90 hover:text-white">Projects</a>
+              <a href="/workshop" className="underline text-white/90 hover:text-white">Workshop</a>
+              <a href="/whyus" className="underline text-white/90 hover:text-white">Why Us</a>
               <a href="/booking" className="underline text-white/90 hover:text-white">Booking</a>
               <a href="/faq" className="underline text-white/90 hover:text-white">FAQ</a>
             </div>

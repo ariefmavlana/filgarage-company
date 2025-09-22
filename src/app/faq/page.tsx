@@ -1,3 +1,21 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "FAQ - Pertanyaan Umum | FIL GARAGE Auto Care Bandung",
+  description: "Pertanyaan umum seputar layanan nano coating, auto detailing, paint protection film, dan booking di FIL GARAGE Bandung. Temukan jawaban lengkap untuk pertanyaan Anda.",
+  keywords: "faq fil garage, pertanyaan nano coating bandung, tanya jawab auto care bandung, booking fil garage",
+  openGraph: {
+    title: "FAQ - Pertanyaan Umum | FIL GARAGE Auto Care Bandung",
+    description: "Pertanyaan umum seputar layanan nano coating, auto detailing, paint protection film, dan booking di FIL GARAGE Bandung. Temukan jawaban lengkap untuk pertanyaan Anda.",
+    url: "https://filgarageautocare.com/faq",
+    siteName: "FIL GARAGE",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://filgarageautocare.com/faq",
+  },
+};
+
 export default function FAQPage() {
   return (
     <main className="font-inter min-h-screen bg-black text-white">

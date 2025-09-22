@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://filgarageautocare.com/sitemap.xml
+
+# Disallow admin or private areas (if any)
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+
+# Allow all other content
+Allow: /services
+Allow: /booking
+Allow: /pricelist
+Allow: /products
+Allow: /projects
+Allow: /whyus
+Allow: /workshop
+Allow: /faq

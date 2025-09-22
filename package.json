@@ -5,8 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:static": "next build && next export",
     "start": "NODE_ENV=production node server.js",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "npm run build && echo 'Build completed. Upload the out/ folder to your hosting.'"
   },
   "dependencies": {
     "critters": "^0.0.23",

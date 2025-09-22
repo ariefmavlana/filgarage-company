@@ -1,4 +1,21 @@
 import BookingForm from "../components/booking/BookingForm";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Booking Layanan | FIL GARAGE - Nano Coating & Auto Care Bandung",
+  description: "Booking layanan nano coating, auto care, dan modifikasi mobil di FIL GARAGE Bandung. Formulir booking mudah dengan konfirmasi WhatsApp langsung.",
+  keywords: "booking nano coating bandung, booking auto care bandung, booking mobil bandung, fil garage booking",
+  openGraph: {
+    title: "Booking Layanan | FIL GARAGE - Nano Coating & Auto Care Bandung",
+    description: "Booking layanan nano coating, auto care, dan modifikasi mobil di FIL GARAGE Bandung. Formulir booking mudah dengan konfirmasi WhatsApp langsung.",
+    url: "https://filgarageautocare.com/booking",
+    siteName: "FIL GARAGE",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://filgarageautocare.com/booking",
+  },
+};
 
 export default function BookingPage() {
   return (

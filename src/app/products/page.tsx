@@ -1,5 +1,22 @@
 import Image from "next/image";
 import ProductDetails from "./ProductDetails";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Produk Auto Care Premium | FIL GARAGE - Car Care Products Bandung",
+  description: "Produk auto care premium FIL GARAGE: car shampoo, anti fungal, tire wax, dan water-based body shine. Produk berkualitas tinggi untuk perawatan mobil terbaik di Bandung.",
+  keywords: "produk auto care bandung, car shampoo bandung, tire wax bandung, anti fungal mobil, fil garage products",
+  openGraph: {
+    title: "Produk Auto Care Premium | FIL GARAGE - Car Care Products Bandung",
+    description: "Produk auto care premium FIL GARAGE: car shampoo, anti fungal, tire wax, dan water-based body shine. Produk berkualitas tinggi untuk perawatan mobil terbaik di Bandung.",
+    url: "https://filgarageautocare.com/products",
+    siteName: "FIL GARAGE",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://filgarageautocare.com/products",
+  },
+};
 
 const PRODUCTS = [
   {
