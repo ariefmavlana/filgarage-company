@@ -130,10 +130,11 @@ export default function Hero() {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-none mb-6 font-orbitron">
             <span className="text-white">FIL GARAGE</span>
             <br />
-
             <span className="text-primary text-xl md:text-2xl lg:text-4xl uppercase">
-              Autocare & Modification
+              Auto Care & Modification
             </span>
+            <br />
+            <span className="text-secondary text-xl md:text-2xl lg:text-4xl uppercase">Perawatan Terbaik Di Bandung</span>
           </h1>
 
           <motion.div
@@ -184,7 +185,7 @@ export default function Hero() {
               <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                href="https://wa.me/6287776734038?text=Halo%2C%20saya%20ingin%20booking%20layanan%20di%20FIL%20GARAGE.%20Boleh%20dibantu%3F"
+                href="https://wa.me/6281312200142?text=Halo%2C%20saya%20ingin%20booking%20layanan%20di%20FIL%20GARAGE.%20Boleh%20dibantu%3F"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-4 px-10 py-5 bg-primary text-white font-black uppercase text-lg tracking-wider hover:bg-white hover:text-black transition-all duration-300 group"
@@ -202,7 +203,7 @@ export default function Hero() {
               {/* Stats */}
               <div className="flex gap-8 pt-6">
                 <div className="text-center">
-                  <div className="text-3xl font-black text-primary">500+</div>
+                  <div className="text-3xl font-black text-primary">1500+</div>
                   <div className="text-sm uppercase tracking-wider text-gray-400">
                     Mobil Dirawat
                   </div>

@@ -53,7 +53,7 @@ const PRODUCTS = [
 ];
 
 export default function ProductsPage() {
-  const waNumber = process.env.NEXT_PUBLIC_WHATSAPP || "6287776734038";
+  const waNumber = process.env.NEXT_PUBLIC_WHATSAPP || "6281312200142";
   const waText = encodeURIComponent("Halo Fil Garage, saya tertarik dengan produk Anda.");
   const waLink = `https://wa.me/${waNumber}?text=${waText}`;
   return (
@@ -94,7 +94,7 @@ export default function ProductsPage() {
               </div>
             ))}
           </div>
-          <p className="text-white/50 text-sm mt-6">Interested? Contact us to learn more. {waLink}</p>
+          <p className="text-white/50 text-sm mt-6">Interested? Contact us to learn more.</p>
         </div>
       </section>
     </main>

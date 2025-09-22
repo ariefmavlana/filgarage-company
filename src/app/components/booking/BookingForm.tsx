@@ -14,9 +14,12 @@ declare global {
 
 const SERVICE_OPTIONS = [
   "Nano Coating Ceramic",
-  "Rust Protection / Anti-Rust",
+  "Anti Karat",
   "PPF (Paint Protection Film)",
-  "Polishing",
+  "Poles",
+  "Paint Protection",
+  "Peredam Suara",
+  "Reaglos",
 ] as const;
 
 export default function BookingForm() {
@@ -97,7 +100,7 @@ export default function BookingForm() {
 
     setSubmitState("submitting");
     try {
-      const waNumber = process.env.NEXT_PUBLIC_WHATSAPP || "6287776734038";
+      const waNumber = process.env.NEXT_PUBLIC_WHATSAPP || "6281312200142";
       const lines = [
         "Booking Baru Fil Garage",
         `Nama: ${ownerName}`,

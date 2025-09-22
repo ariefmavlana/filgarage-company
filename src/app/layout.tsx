@@ -27,9 +27,13 @@ const orbitron = Orbitron({
 });
 
 export const metadata: Metadata = {
-  title: "FIL GARAGE | Layanan Otomotif",
-  description: "Velg, oli, audio system, lampu custom, dan layanan premium.",
-};
+  title: "FIL GARAGE | Nano Coating, Auto Care & Modification - Perawatan Terbaik Di Bandung",
+  description: "Layanan nano coating, auto care, dan modifikasi mobil terbaik di Bandung. Spesialis perawatan kendaraan premium dengan teknologi terdepan untuk hasil maksimal.",
+  icons: {
+    icon: '/icon.png',
+  },
+};``
+
 
 export default function RootLayout({
   children,

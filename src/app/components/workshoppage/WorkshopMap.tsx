@@ -60,8 +60,8 @@ function InfoBlocks() {
         <div className="space-y-3">
           <ContactRow
             icon={<IoLogoWhatsapp className="text-3xl text-green-500" />}
-            text="+62 877-7673-4038"
-            link="https://wa.me/6287776734038"
+            text="+62 813-1220-0142"
+            link="https://wa.me/6281312200142"
           />
           <ContactRow
             icon={<RiInstagramFill className="text-3xl text-pink-500" />}

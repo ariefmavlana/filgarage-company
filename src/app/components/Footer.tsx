@@ -37,7 +37,7 @@ export default function Footer() {
             </p>
             <div className="flex flex-col gap-2">
               <a
-                href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP || "6287776734038"}`}
+                href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP || "6281312200142"}`}
                 className="inline-flex items-center gap-2 text-green-400 hover:text-green-300 underline"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -72,11 +72,11 @@ export default function Footer() {
                   size={18}
                 />
                 <a
-                  href="https://wa.me/6287776734038"
+                  href="https://wa.me/6281312200142"
                   className="text-white/80 hover:text-white transition-colors"
                 >
-                  +62 877-7673-4038{" "}
-                  <span className="font-bold">ADMIN (Arief Maulana)</span>
+                  +62 813-1220-0142{" "}
+                  <span className="font-bold">ADMIN</span>
                 </a>
               </div>
             </div>

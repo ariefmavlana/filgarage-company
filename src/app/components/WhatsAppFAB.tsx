@@ -1,7 +1,7 @@
 "use client";
 
 export default function WhatsAppFAB() {
-  const wa = process.env.NEXT_PUBLIC_WHATSAPP || "6287776734038";
+  const wa = process.env.NEXT_PUBLIC_WHATSAPP || "6281312200142";
   const text = encodeURIComponent("Halo Fil Garage, saya ingin bertanya.");
   const href = `https://wa.me/${wa}?text=${text}`;
   return (
