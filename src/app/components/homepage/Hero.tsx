@@ -165,6 +165,10 @@ export default function Hero() {
                 <div className="w-20 h-1 bg-primary"></div>
 
                 <ul className="text-gray-300 text-sm lg:text-lg leading-relaxed space-y-3 list-disc list-inside">
+                  <li>NANO COATING</li>
+                  <li>POLES</li>
+                  <li>REAGLOS NANO</li>
+                  <li>ANTI KARAT</li>
                   <li>VELG NEW & SEC</li>
                   <li>OLI MOBIL</li>
                   <li>CAT VELG, POLES, BRUSH DIAMOND</li>
@@ -176,7 +180,6 @@ export default function Hero() {
                       <li className="italic">Custom Full Setup</li>
                     </ol>
                   </li>
-
                   <li>LAMPU CUSTOM Bi-LED</li>
                 </ul>
               </div>

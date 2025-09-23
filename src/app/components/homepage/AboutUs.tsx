@@ -89,8 +89,8 @@ export default function AboutUs() {
               </h2>
               <div className="w-12 h-1 bg-white mb-6"></div>
               <p className="text-white text-base lg:text-lg leading-relaxed text-justify mb-6">
-                Percayakan mobil Anda kepada detailer profesional kami di SR
-                Point untuk mendapatkan perlakuan istimewa yang membuatnya
+                Percayakan mobil Anda kepada detailer profesional kami di Fil Garage 
+                untuk mendapatkan perlakuan istimewa yang membuatnya
                 tampak seperti baru. Dengan keahlian mendalam dalam coating,
                 detailing, dan perlindungan mobil, tim kami siap memberikan
                 kualitas terbaik dan hasil yang memuaskan setiap kunjungan.

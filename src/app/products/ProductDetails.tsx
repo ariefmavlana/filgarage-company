@@ -41,24 +41,25 @@ export default function ProductDetails({ name, features = [], usage }: ProductDe
 
   return (
     <details className="mt-5 group" onToggle={handleToggle}>
-      <summary className="cursor-pointer inline-flex items-center gap-2 text-sm sm:text-base font-semibold text-black py-2">
-        <span className="underline">More Details</span>
+      <summary className="cursor-pointer inline-flex items-center gap-2 text-sm sm:text-base font-semibold text-black py-2 hover:text-primary transition-colors">
+        <span className="underline">Detail Lengkap</span>
+        <span className="text-xs">(klik untuk melihat)</span>
       </summary>
       <div className="mt-2 sm:mt-3 text-sm text-gray-800">
         {features && features.length > 0 && (
-          <div className="mb-3">
-            <div className="font-semibold">Key Features</div>
-            <ul className="list-disc pl-5 mt-1">
+          <div className="mb-4">
+            <div className="font-semibold text-primary mb-2">✨ Fitur Unggulan</div>
+            <ul className="list-disc pl-5 mt-1 space-y-1">
               {features.map((feature, index) => (
-                <li key={`${name}-feature-${index}`}>{feature}</li>
+                <li key={`${name}-feature-${index}`} className="text-gray-700">{feature}</li>
               ))}
             </ul>
           </div>
         )}
         {usage && (
           <div>
-            <div className="font-semibold">Usage</div>
-            <p className="mt-1">{usage}</p>
+            <div className="font-semibold text-primary mb-2">📋 Cara Penggunaan</div>
+            <p className="mt-1 text-gray-700 leading-relaxed">{usage}</p>
           </div>
         )}
       </div>

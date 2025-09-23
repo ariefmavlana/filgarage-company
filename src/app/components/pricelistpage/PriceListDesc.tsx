@@ -31,7 +31,7 @@ export default function PriceListDesc() {
       name: "Small",
       prices: [
         { type: "Paint Protection", price: "Rp. 1.200.000" },
-        { type: "Sound Proff", price: "Rp. 5.000.000" },
+        { type: "Sound Proof", price: "Rp. 5.000.000" },
         { type: "Rust Protection", price: "Rp. 2.300.000" },
         { type: "Nano Coating Reguler", price: "Rp. 3.500.000" },
         { type: "Nano Coating Premium", price: "Rp. 4.500.000" },
@@ -44,7 +44,7 @@ export default function PriceListDesc() {
       name: "Medium",
       prices: [
         { type: "Paint Protection", price: "Rp. 1.300.000" },
-        { type: "Sound Proff", price: "Rp. 5.000.000" },
+        { type: "Sound Proof", price: "Rp. 5.000.000" },
         { type: "Rust Protection", price: "Rp. 2.400.000" },
         { type: "Nano Coating Reguler", price: "Rp. 4.000.000" },
         { type: "Nano Coating Premium", price: "Rp. 5.000.000" },
@@ -57,7 +57,7 @@ export default function PriceListDesc() {
       name: "Large",
       prices: [
         { type: "Paint Protection", price: "Rp. 1.400.000" },
-        { type: "Sound Proff", price: "Rp. 5.000.000" },
+        { type: "Sound Proof", price: "Rp. 5.000.000" },
         { type: "Rust Protection", price: "Rp. 2.500.000" },
         { type: "Nano Coating Reguler", price: "Rp. 4.500.000" },
         { type: "Nano Coating Premium", price: "Rp. 5.500.000" },
@@ -70,7 +70,7 @@ export default function PriceListDesc() {
       name: "Extra Large",
       prices: [
         { type: "Paint Protection", price: "Rp. 1.500.000" },
-        { type: "Sound Proff", price: "Rp. 6.000.000" },
+        { type: "Sound Proof", price: "Rp. 6.000.000" },
         { type: "Rust Protection", price: "Rp. 2.600.000" },
         { type: "Nano Coating Reguler", price: "Rp. 5.000.000" },
         { type: "Nano Coating Premium", price: "Rp. 6.000.000" },
